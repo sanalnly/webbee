@@ -5,10 +5,13 @@ namespace App\Http\Controllers;
 
 use App\Models\MenuItem;
 use Illuminate\Routing\Controller as BaseController;
+use Response;
 
 class MenuController extends BaseController
 {
     public function getMenuItems() {
-        throw new \Exception('implement in coding task 3');
+        
+		$menuitem=MenuItem::get();
+		return Response::json($menuitem);
     }
 }
